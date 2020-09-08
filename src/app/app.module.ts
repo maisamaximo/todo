@@ -29,7 +29,11 @@ import { TodoComponent } from "./todo/todo.component";
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpIntercepterBasicAuthService,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
